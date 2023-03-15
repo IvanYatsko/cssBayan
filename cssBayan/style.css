@@ -73,25 +73,13 @@ h1 {
     cursor: pointer;
 }
 
-.block:hover .cross {
-    transform: rotate(45deg);
-}
-
-.radio-button:checked ~ .input-label .picture,
-.block:hover .picture {
+.radio-button:checked ~ .input-label .picture {
     margin-bottom: 1rem;
     max-width: 20rem;
 }
 
 .radio-button:checked ~ .input-label .cross {
     transform: rotate(45deg);
-}
-
-.main:hover .cross {
-    visibility: visible;
-}
-
-.main:hover .cross {
     visibility: visible;
 }
 
@@ -99,17 +87,33 @@ h1 {
     display: none;
 }
 
+@media (hover: hover) {
+
+    .main:hover .cross {
+        visibility: visible;
+    }
+
+    .block:hover .cross {
+        transform: rotate(45deg);
+    }
+
+    .block:hover .picture {
+        margin-bottom: 1rem;
+        max-width: 20rem;
+    }  
+    
+    .radio-button:active ~ .input-label .text-block,
+    .radio-button:active ~ .input-label .picture {
+        opacity: 0.4;
+    }
+    
+    .main:hover .text {
+        color: #000;
+    }
+}
+
 .text {
     color: #0000ffd1;
-}
-
-.main:hover .text {
-    color: #000;
-}
-
-.radio-button:active ~ .input-label .text-block,
-.radio-button:active ~ .input-label .picture {
-    opacity: 0.4;
 }
 
 .radio-button:checked ~ .input-label .text {
